@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move &apos;stm32f446xx_gpio.h, stm32f446xx_i2c.h&apos; to &apos;Inc&apos;" description="Move 2 resources to &apos;Inc&apos;" destination="MiddleWare/Inc" element1="MiddleWare/stm32f446xx_gpio.h" element2="MiddleWare/stm32f446xx_i2c.h" flags="7" id="org.eclipse.ltk.core.refactoring.move.resources" resources="2" stamp="1624268571725" updateReferences="true"/>
+</session>

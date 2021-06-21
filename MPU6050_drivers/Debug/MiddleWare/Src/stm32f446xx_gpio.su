@@ -1,0 +1,11 @@
+stm32f446xx_gpio.c:27:6:GPIO_PeriClkCntrl	16	static
+stm32f446xx_gpio.c:116:6:GPIO_Init	24	static
+stm32f446xx_gpio.c:224:6:GPIO_DeInit	16	static
+stm32f446xx_gpio.c:275:9:GPIO_ReadIPin	24	static
+stm32f446xx_gpio.c:298:10:GPIO_ReadIPort	24	static
+stm32f446xx_gpio.c:324:6:GPIO_WriteOPin	16	static
+stm32f446xx_gpio.c:354:6:GPIO_WriteOPort	16	static
+stm32f446xx_gpio.c:375:6:GPIO_ToggleOPin	16	static
+stm32f446xx_gpio.c:396:6:GPIO_IRQ_ITConfig	16	static
+stm32f446xx_gpio.c:454:6:GPIO_IRQConfig	24	static
+stm32f446xx_gpio.c:478:6:GPIO_IRQHandling	16	static
