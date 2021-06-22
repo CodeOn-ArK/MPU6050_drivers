@@ -1,265 +1,57 @@
-15:28:35 **** Incremental Build of configuration Debug for project MPU6050_drivers ****
+17:16:15 **** Incremental Build of configuration Debug for project MPU6050_drivers ****
 make -j8 all 
-arm-none-eabi-size   MPU6050_drivers.elf 
-   text	   data	    bss	    dec	    hex	filename
-   3556	     76	   1604	   5236	   1474	MPU6050_drivers.elf
-Finished building: default.size.stdout
- 
-15:29:03 **** Incremental Build of configuration Debug for project MPU6050_drivers ****
-make -j8 all 
-arm-none-eabi-size   MPU6050_drivers.elf 
-   text	   data	    bss	    dec	    hex	filename
-   3556	     76	   1604	   5236	   1474	MPU6050_drivers.elf
-Finished building: default.size.stdout
- 
-15:29:19 **** Incremental Build of configuration Debug for project MPU6050_drivers ****
-make -j8 all 
-arm-none-eabi-size   MPU6050_drivers.elf 
-   text	   data	    bss	    dec	    hex	filename
-   3556	     76	   1604	   5236	   1474	MPU6050_drivers.elf
-Finished building: default.size.stdout
- 
-15:29:33 **** Incremental Build of configuration Debug for project MPU6050_drivers ****
-make -j8 all 
-arm-none-eabi-size   MPU6050_drivers.elf 
-   text	   data	    bss	    dec	    hex	filename
-   3556	     76	   1604	   5236	   1474	MPU6050_drivers.elf
-Finished building: default.size.stdout
- 
-15:37:45 **** Incremental Build of configuration Debug for project MPU6050_drivers ****
-make -j8 all 
-arm-none-eabi-size   MPU6050_drivers.elf 
-   text	   data	    bss	    dec	    hex	filename
-   3556	     76	   1604	   5236	   1474	MPU6050_drivers.elf
-Finished building: default.size.stdout
- 
-15:38:51 **** Incremental Build of configuration Debug for project MPU6050_drivers ****
-make -j8 all 
-arm-none-eabi-size   MPU6050_drivers.elf 
-   text	   data	    bss	    dec	    hex	filename
-   3556	     76	   1604	   5236	   1474	MPU6050_drivers.elf
-Finished building: default.size.stdout
- 
-15:39:09 **** Incremental Build of configuration Debug for project MPU6050_drivers ****
-make -j8 all 
-arm-none-eabi-size   MPU6050_drivers.elf 
-   text	   data	    bss	    dec	    hex	filename
-   3556	     76	   1604	   5236	   1474	MPU6050_drivers.elf
-Finished building: default.size.stdout
- 
-15:39:19 **** Incremental Build of configuration Debug for project MPU6050_drivers ****
-make -j8 all 
-arm-none-eabi-size   MPU6050_drivers.elf 
-   text	   data	    bss	    dec	    hex	filename
-   3556	     76	   1604	   5236	   1474	MPU6050_drivers.elf
-Finished building: default.size.stdout
- 
-15:40:35 **** Incremental Build of configuration Debug for project MPU6050_drivers ****
-make -j8 all 
-arm-none-eabi-size   MPU6050_drivers.elf 
-   text	   data	    bss	    dec	    hex	filename
-   3556	     76	   1604	   5236	   1474	MPU6050_drivers.elf
-Finished building: default.size.stdout
- 
-15:52:06 **** Incremental Build of configuration Debug for project MPU6050_drivers ****
-make -j8 all 
-arm-none-eabi-size   MPU6050_drivers.elf 
-   text	   data	    bss	    dec	    hex	filename
-   3556	     76	   1604	   5236	   1474	MPU6050_drivers.elf
-Finished building: default.size.stdout
- 
-15:52:35 **** Incremental Build of configuration Debug for project MPU6050_drivers ****
-make -j8 all 
-arm-none-eabi-size   MPU6050_drivers.elf 
-   text	   data	    bss	    dec	    hex	filename
-   3556	     76	   1604	   5236	   1474	MPU6050_drivers.elf
-Finished building: default.size.stdout
- 
-16:03:13 **** Incremental Build of configuration Debug for project MPU6050_drivers ****
-make -j8 all 
-arm-none-eabi-size   MPU6050_drivers.elf 
-   text	   data	    bss	    dec	    hex	filename
-   3556	     76	   1604	   5236	   1474	MPU6050_drivers.elf
-Finished building: default.size.stdout
- 
-16:05:51 **** Incremental Build of configuration Debug for project MPU6050_drivers ****
-make -j8 all 
-arm-none-eabi-size   MPU6050_drivers.elf 
-   text	   data	    bss	    dec	    hex	filename
-   3556	     76	   1604	   5236	   1474	MPU6050_drivers.elf
-Finished building: default.size.stdout
- 
-16:09:07 **** Incremental Build of configuration Debug for project MPU6050_drivers ****
-make -j8 all 
-arm-none-eabi-gcc "../Src/008I2C_master_Tx_test.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32 -DSTM32F4 -DSTM32F446RETx -DDEBUG -DNUCLEO_F446RE -c -I../Inc -I"/home/ark/st/MPU6050_Drivers/MPU6050_drivers/MiddleWare/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/008I2C_master_Tx_test.d" -MT"Src/008I2C_master_Tx_test.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/008I2C_master_Tx_test.o"
-In file included from /home/ark/st/MPU6050_Drivers/MPU6050_drivers/MiddleWare/Inc/stm32f446xx.h:640:0,
-                 from ../Inc/main.h:11,
-                 from ../Src/008I2C_master_Tx_test.c:9:
-../Src/008I2C_master_Tx_test.c: In function 'I2C1_Inits':
-/home/ark/st/MPU6050_Drivers/MPU6050_drivers/MiddleWare/Inc/stm32f446xx_i2c.h:51:26: warning: large integer implicitly truncated to unsigned type [-Woverflow]
- #define I2C_SCL_SPEED_SM 0x186A0UL
-                          ^
-../Src/008I2C_master_Tx_test.c:64:39: note: in expansion of macro 'I2C_SCL_SPEED_SM'
-  I2C1Handle.I2C_Config.I2C_SCLSpeed = I2C_SCL_SPEED_SM;
-                                       ^~~~~~~~~~~~~~~~
-arm-none-eabi-gcc -o "MPU6050_drivers.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/ark/st/MPU6050_Drivers/MPU6050_drivers/STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="MPU6050_drivers.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: MPU6050_drivers.elf
- 
-arm-none-eabi-objdump -h -S  MPU6050_drivers.elf  > "MPU6050_drivers.list"
-arm-none-eabi-objcopy  -O binary  MPU6050_drivers.elf  "MPU6050_drivers.bin"
-arm-none-eabi-size   MPU6050_drivers.elf 
-   text	   data	    bss	    dec	    hex	filename
-   3556	     76	   1604	   5236	   1474	MPU6050_drivers.elf
-Finished building: default.size.stdout
- 
-Finished building: MPU6050_drivers.bin
- 
-Finished building: MPU6050_drivers.list
- 
-16:19:14 **** Clean-only build of configuration Debug for project MPU6050_drivers ****
-make -j8 clean 
-rm -rf *
- 
-16:19:15 **** Incremental Build of configuration Debug for project MPU6050_drivers ****
-make -j8 all 
-arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -c -x assembler-with-cpp -MMD -MP -MF"Startup/startup_stm32f446retx.d" -MT"Startup/startup_stm32f446retx.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Startup/startup_stm32f446retx.o" "../Startup/startup_stm32f446retx.s"
-arm-none-eabi-gcc "../Src/008I2C_master_Tx_test.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32 -DSTM32F4 -DSTM32F446RETx -DDEBUG -DNUCLEO_F446RE -c -I../Inc -I"/home/ark/st/MPU6050_Drivers/MPU6050_drivers/MiddleWare/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/008I2C_master_Tx_test.d" -MT"Src/008I2C_master_Tx_test.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/008I2C_master_Tx_test.o"
-arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32 -DSTM32F4 -DSTM32F446RETx -DDEBUG -DNUCLEO_F446RE -c -I../Inc -I"/home/ark/st/MPU6050_Drivers/MPU6050_drivers/MiddleWare/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
 arm-none-eabi-gcc "../Src/syscalls.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32 -DSTM32F4 -DSTM32F446RETx -DDEBUG -DNUCLEO_F446RE -c -I../Inc -I"/home/ark/st/MPU6050_Drivers/MPU6050_drivers/MiddleWare/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/syscalls.o"
 arm-none-eabi-gcc "../Src/sysmem.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32 -DSTM32F4 -DSTM32F446RETx -DDEBUG -DNUCLEO_F446RE -c -I../Inc -I"/home/ark/st/MPU6050_Drivers/MPU6050_drivers/MiddleWare/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/sysmem.d" -MT"Src/sysmem.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/sysmem.o"
-arm-none-eabi-gcc "../MiddleWare/Src/stm32f446xx_gpio.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32 -DSTM32F4 -DSTM32F446RETx -DDEBUG -DNUCLEO_F446RE -c -I../Inc -I"/home/ark/st/MPU6050_Drivers/MPU6050_drivers/MiddleWare/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"MiddleWare/Src/stm32f446xx_gpio.d" -MT"MiddleWare/Src/stm32f446xx_gpio.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "MiddleWare/Src/stm32f446xx_gpio.o"
-arm-none-eabi-gcc "../MiddleWare/Src/stm32f446xx_i2c.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32 -DSTM32F4 -DSTM32F446RETx -DDEBUG -DNUCLEO_F446RE -c -I../Inc -I"/home/ark/st/MPU6050_Drivers/MPU6050_drivers/MiddleWare/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"MiddleWare/Src/stm32f446xx_i2c.d" -MT"MiddleWare/Src/stm32f446xx_i2c.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "MiddleWare/Src/stm32f446xx_i2c.o"
-arm-none-eabi-gcc "../MiddleWare/Src/stm32f446xx_rcc.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32 -DSTM32F4 -DSTM32F446RETx -DDEBUG -DNUCLEO_F446RE -c -I../Inc -I"/home/ark/st/MPU6050_Drivers/MPU6050_drivers/MiddleWare/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"MiddleWare/Src/stm32f446xx_rcc.d" -MT"MiddleWare/Src/stm32f446xx_rcc.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "MiddleWare/Src/stm32f446xx_rcc.o"
-../Src/main.c:31:4: warning: #warning "FPU is not initialized, but the project is compiling for an FPU. Please initialize the FPU before use." [-Wcpp]
-   #warning "FPU is not initialized, but the project is compiling for an FPU. Please initialize the FPU before use."
-    ^~~~~~~
-../Src/main.c: In function 'I2C1_Inits':
-../Src/main.c:77:46: error: 'MASTERS_ADDRESS' undeclared (first use in this function); did you mean 'MASTER_ADDR'?
-  I2C1Handle.I2C_Config.I2C_DeviceAddress  =  MASTERS_ADDRESS;
-                                              ^~~~~~~~~~~~~~~
-                                              MASTER_ADDR
-../Src/main.c:77:46: note: each undeclared identifier is reported only once for each function it appears in
-In file included from /home/ark/st/MPU6050_Drivers/MPU6050_drivers/MiddleWare/Inc/stm32f446xx.h:640:0,
-                 from ../Inc/main.h:11,
-                 from ../Src/main.c:28:
-/home/ark/st/MPU6050_Drivers/MPU6050_drivers/MiddleWare/Inc/stm32f446xx_i2c.h:51:26: warning: large integer implicitly truncated to unsigned type [-Woverflow]
- #define I2C_SCL_SPEED_SM 0x186A0UL
-                          ^
-../Src/main.c:79:39: note: in expansion of macro 'I2C_SCL_SPEED_SM'
-  I2C1Handle.I2C_Config.I2C_SCLSpeed = I2C_SCL_SPEED_SM;
-                                       ^~~~~~~~~~~~~~~~
-../Src/main.c: In function 'main':
-../Src/main.c:105:37: warning: passing argument 2 of 'I2C_MasterSendData' makes pointer from integer without a cast [-Wint-conversion]
-    I2C_MasterSendData( &I2C1Handle, 0x1, 0x1, MPU_ADDR);
-                                     ^~~
-In file included from /home/ark/st/MPU6050_Drivers/MPU6050_drivers/MiddleWare/Inc/stm32f446xx.h:640:0,
-                 from ../Inc/main.h:11,
-                 from ../Src/main.c:28:
-/home/ark/st/MPU6050_Drivers/MPU6050_drivers/MiddleWare/Inc/stm32f446xx_i2c.h:151:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'int'
- void I2C_MasterSendData(I2C_Handle_t *pI2CHandle, uint8_t *pTXBuffer, uint32_t Len, uint8_t SlaveAddr);
-      ^~~~~~~~~~~~~~~~~~
-make: *** [Src/subdir.mk:29: Src/main.o] Error 1
-make: *** Waiting for unfinished jobs....
-"make -j8 all" terminated with exit code 2. Build might be incomplete.
-16:19:31 **** Incremental Build of configuration Debug for project MPU6050_drivers ****
-make -j8 all 
-arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32 -DSTM32F4 -DSTM32F446RETx -DDEBUG -DNUCLEO_F446RE -c -I../Inc -I"/home/ark/st/MPU6050_Drivers/MPU6050_drivers/MiddleWare/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
-../Src/main.c:31:4: warning: #warning "FPU is not initialized, but the project is compiling for an FPU. Please initialize the FPU before use." [-Wcpp]
-   #warning "FPU is not initialized, but the project is compiling for an FPU. Please initialize the FPU before use."
-    ^~~~~~~
-../Src/main.c: In function 'I2C1_Inits':
-../Src/main.c:77:46: error: 'MASTER_ADDRESS' undeclared (first use in this function); did you mean 'MASTER_ADDR'?
-  I2C1Handle.I2C_Config.I2C_DeviceAddress  =  MASTER_ADDRESS;
-                                              ^~~~~~~~~~~~~~
-                                              MASTER_ADDR
-../Src/main.c:77:46: note: each undeclared identifier is reported only once for each function it appears in
-In file included from /home/ark/st/MPU6050_Drivers/MPU6050_drivers/MiddleWare/Inc/stm32f446xx.h:640:0,
-                 from ../Inc/main.h:11,
-                 from ../Src/main.c:28:
-/home/ark/st/MPU6050_Drivers/MPU6050_drivers/MiddleWare/Inc/stm32f446xx_i2c.h:51:26: warning: large integer implicitly truncated to unsigned type [-Woverflow]
- #define I2C_SCL_SPEED_SM 0x186A0UL
-                          ^
-../Src/main.c:79:39: note: in expansion of macro 'I2C_SCL_SPEED_SM'
-  I2C1Handle.I2C_Config.I2C_SCLSpeed = I2C_SCL_SPEED_SM;
-                                       ^~~~~~~~~~~~~~~~
-../Src/main.c: In function 'main':
-../Src/main.c:105:37: warning: passing argument 2 of 'I2C_MasterSendData' makes pointer from integer without a cast [-Wint-conversion]
-    I2C_MasterSendData( &I2C1Handle, 0x1, 0x1, MPU_ADDR);
-                                     ^~~
-In file included from /home/ark/st/MPU6050_Drivers/MPU6050_drivers/MiddleWare/Inc/stm32f446xx.h:640:0,
-                 from ../Inc/main.h:11,
-                 from ../Src/main.c:28:
-/home/ark/st/MPU6050_Drivers/MPU6050_drivers/MiddleWare/Inc/stm32f446xx_i2c.h:151:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'int'
- void I2C_MasterSendData(I2C_Handle_t *pI2CHandle, uint8_t *pTXBuffer, uint32_t Len, uint8_t SlaveAddr);
-      ^~~~~~~~~~~~~~~~~~
-make: *** [Src/subdir.mk:29: Src/main.o] Error 1
-"make -j8 all" terminated with exit code 2. Build might be incomplete.
-16:19:40 **** Incremental Build of configuration Debug for project MPU6050_drivers ****
-make -j8 all 
-arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32 -DSTM32F4 -DSTM32F446RETx -DDEBUG -DNUCLEO_F446RE -c -I../Inc -I"/home/ark/st/MPU6050_Drivers/MPU6050_drivers/MiddleWare/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
-../Src/main.c:31:4: warning: #warning "FPU is not initialized, but the project is compiling for an FPU. Please initialize the FPU before use." [-Wcpp]
-   #warning "FPU is not initialized, but the project is compiling for an FPU. Please initialize the FPU before use."
-    ^~~~~~~
-In file included from /home/ark/st/MPU6050_Drivers/MPU6050_drivers/MiddleWare/Inc/stm32f446xx.h:640:0,
-                 from ../Inc/main.h:11,
-                 from ../Src/main.c:28:
-../Src/main.c: In function 'I2C1_Inits':
-/home/ark/st/MPU6050_Drivers/MPU6050_drivers/MiddleWare/Inc/stm32f446xx_i2c.h:51:26: warning: large integer implicitly truncated to unsigned type [-Woverflow]
- #define I2C_SCL_SPEED_SM 0x186A0UL
-                          ^
-../Src/main.c:79:39: note: in expansion of macro 'I2C_SCL_SPEED_SM'
-  I2C1Handle.I2C_Config.I2C_SCLSpeed = I2C_SCL_SPEED_SM;
-                                       ^~~~~~~~~~~~~~~~
-../Src/main.c: In function 'main':
-../Src/main.c:105:37: warning: passing argument 2 of 'I2C_MasterSendData' makes pointer from integer without a cast [-Wint-conversion]
-    I2C_MasterSendData( &I2C1Handle, 0x1, 0x1, MPU_ADDR);
-                                     ^~~
-In file included from /home/ark/st/MPU6050_Drivers/MPU6050_drivers/MiddleWare/Inc/stm32f446xx.h:640:0,
-                 from ../Inc/main.h:11,
-                 from ../Src/main.c:28:
-/home/ark/st/MPU6050_Drivers/MPU6050_drivers/MiddleWare/Inc/stm32f446xx_i2c.h:151:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'int'
- void I2C_MasterSendData(I2C_Handle_t *pI2CHandle, uint8_t *pTXBuffer, uint32_t Len, uint8_t SlaveAddr);
-      ^~~~~~~~~~~~~~~~~~
 arm-none-eabi-gcc -o "MPU6050_drivers.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/ark/st/MPU6050_Drivers/MPU6050_drivers/STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="MPU6050_drivers.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 Finished building target: MPU6050_drivers.elf
  
-arm-none-eabi-size   MPU6050_drivers.elf 
 arm-none-eabi-objdump -h -S  MPU6050_drivers.elf  > "MPU6050_drivers.list"
 arm-none-eabi-objcopy  -O binary  MPU6050_drivers.elf  "MPU6050_drivers.bin"
+arm-none-eabi-size   MPU6050_drivers.elf 
    text	   data	    bss	    dec	    hex	filename
-   3528	     56	   1600	   5184	   1440	MPU6050_drivers.elf
+   8480	    156	   1620	  10256	   2810	MPU6050_drivers.elf
 Finished building: default.size.stdout
  
 Finished building: MPU6050_drivers.bin
  
 Finished building: MPU6050_drivers.list
  
-16:22:11 **** Incremental Build of configuration Debug for project MPU6050_drivers ****
+17:16:20 **** Incremental Build of configuration Debug for project MPU6050_drivers ****
+make -j8 all 
+arm-none-eabi-size   MPU6050_drivers.elf 
+   text	   data	    bss	    dec	    hex	filename
+   8480	    156	   1620	  10256	   2810	MPU6050_drivers.elf
+Finished building: default.size.stdout
+ 
+17:18:19 **** Incremental Build of configuration Debug for project MPU6050_drivers ****
 make -j8 all 
 arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32 -DSTM32F4 -DSTM32F446RETx -DDEBUG -DNUCLEO_F446RE -c -I../Inc -I"/home/ark/st/MPU6050_Drivers/MPU6050_drivers/MiddleWare/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
-../Src/main.c:31:4: warning: #warning "FPU is not initialized, but the project is compiling for an FPU. Please initialize the FPU before use." [-Wcpp]
+../Src/main.c:32:4: warning: #warning "FPU is not initialized, but the project is compiling for an FPU. Please initialize the FPU before use." [-Wcpp]
    #warning "FPU is not initialized, but the project is compiling for an FPU. Please initialize the FPU before use."
     ^~~~~~~
 In file included from /home/ark/st/MPU6050_Drivers/MPU6050_drivers/MiddleWare/Inc/stm32f446xx.h:640:0,
                  from ../Inc/main.h:11,
-                 from ../Src/main.c:28:
+                 from ../Src/main.c:29:
 ../Src/main.c: In function 'I2C1_Inits':
-/home/ark/st/MPU6050_Drivers/MPU6050_drivers/MiddleWare/Inc/stm32f446xx_i2c.h:51:26: warning: large integer implicitly truncated to unsigned type [-Woverflow]
- #define I2C_SCL_SPEED_SM 0x186A0UL
-                          ^
-../Src/main.c:79:39: note: in expansion of macro 'I2C_SCL_SPEED_SM'
-  I2C1Handle.I2C_Config.I2C_SCLSpeed = I2C_SCL_SPEED_SM;
-                                       ^~~~~~~~~~~~~~~~
+/home/ark/st/MPU6050_Drivers/MPU6050_drivers/MiddleWare/Inc/stm32f446xx_i2c.h:53:28: warning: large integer implicitly truncated to unsigned type [-Woverflow]
+ #define I2C_SCL_SPEED_FM4K 0x61A80UL
+                            ^
+../Src/main.c:82:39: note: in expansion of macro 'I2C_SCL_SPEED_FM4K'
+  I2C1Handle.I2C_Config.I2C_SCLSpeed = I2C_SCL_SPEED_FM4K;
+                                       ^~~~~~~~~~~~~~~~~~
 ../Src/main.c: In function 'main':
-../Src/main.c:105:37: warning: passing argument 2 of 'I2C_MasterSendData' makes pointer from integer without a cast [-Wint-conversion]
-    I2C_MasterSendData( &I2C1Handle, 0x1, 0x1, MPU_ADDR);
-                                     ^~~
-In file included from /home/ark/st/MPU6050_Drivers/MPU6050_drivers/MiddleWare/Inc/stm32f446xx.h:640:0,
-                 from ../Inc/main.h:11,
-                 from ../Src/main.c:28:
-/home/ark/st/MPU6050_Drivers/MPU6050_drivers/MiddleWare/Inc/stm32f446xx_i2c.h:151:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'int'
- void I2C_MasterSendData(I2C_Handle_t *pI2CHandle, uint8_t *pTXBuffer, uint32_t Len, uint8_t SlaveAddr);
-      ^~~~~~~~~~~~~~~~~~
+../Src/main.c:102:2: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+  printf("%s", "Hellos\n\r");
+  ^~~~~~
+../Src/main.c:102:2: warning: incompatible implicit declaration of built-in function 'printf'
+../Src/main.c:102:2: note: include '<stdio.h>' or provide a declaration of 'printf'
+../Src/main.c:159:13: warning: format '%d' expects argument of type 'int', but argument 2 has type 'uint8_t * {aka unsigned char *}' [-Wformat=]
+    printf("%d\n\r", data);
+            ~^       ~~~~
+            %hhn
+../Src/main.c:160:18: warning: cast from pointer to integer of different size [-Wpointer-to-int-cast]
+    full_data |= ((uint16_t)data);
+                  ^
 arm-none-eabi-gcc -o "MPU6050_drivers.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/ark/st/MPU6050_Drivers/MPU6050_drivers/STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="MPU6050_drivers.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 Finished building target: MPU6050_drivers.elf
  
@@ -267,7 +59,7 @@ arm-none-eabi-objdump -h -S  MPU6050_drivers.elf  > "MPU6050_drivers.list"
 arm-none-eabi-objcopy  -O binary  MPU6050_drivers.elf  "MPU6050_drivers.bin"
 arm-none-eabi-size   MPU6050_drivers.elf 
    text	   data	    bss	    dec	    hex	filename
-   3528	     56	   1600	   5184	   1440	MPU6050_drivers.elf
+   8480	    156	   1620	  10256	   2810	MPU6050_drivers.elf
 Finished building: default.size.stdout
  
 Finished building: MPU6050_drivers.bin
