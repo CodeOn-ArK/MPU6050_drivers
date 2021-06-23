@@ -36,6 +36,8 @@ void delay();
 void I2C1_GPIOInits();
 void I2C1_Inits();
 
+extern void initialise_monitor_handles(void);
+
 #define MASTER_ADDR		 	 0x38		//Set the master address here
 #define MPU_ADDR			 0x68		//Set the slave address here
 #define SDA_PIN				 GPIO_PIN_3
@@ -86,6 +88,7 @@ void I2C1_Inits()
 
 int main()
 {
+	initialise_monitor_handles();
 
 	//GPIO Button Init
 	GPIO_ButtonConfig();

@@ -136,7 +136,7 @@ int _fstat(int file, struct stat *st)
 
 int _isatty(int file)
 {
-	return 1;
+	return 1;type filter text
 }
 
 int _lseek(int file, int ptr, int dir)

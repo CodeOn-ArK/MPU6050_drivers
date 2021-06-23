@@ -55,7 +55,7 @@ main-build: MPU6050_drivers.elf secondary-outputs
 
 # Tool invocations
 MPU6050_drivers.elf: $(OBJS) $(USER_OBJS) /home/ark/st/MPU6050_Drivers/MPU6050_drivers/STM32F446RETX_FLASH.ld
-	arm-none-eabi-gcc -o "MPU6050_drivers.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"/home/ark/st/MPU6050_Drivers/MPU6050_drivers/STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="MPU6050_drivers.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+	arm-none-eabi-gcc -o "MPU6050_drivers.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"/home/ark/st/MPU6050_Drivers/MPU6050_drivers/STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="MPU6050_drivers.map" -Wl,--gc-sections -static -specs=rdimon.specs -lc -lrdimon --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 
