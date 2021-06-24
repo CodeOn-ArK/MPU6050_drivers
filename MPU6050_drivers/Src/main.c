@@ -107,6 +107,13 @@ int main()
 	uint8_t data[3] = {0,0,0};
 	uint16_t full_data = 0;
 
+	while (MPU6050_Init(&hi2c1) == 1);
+
+	while(1)
+	{
+	  MPU6050_Read_All(&hi2c1, &MPU6050);
+	  for(uint32_t i=0; i<200000; i++);
+	}
 	while(1)
 	{
 		if( GPIO_ReadIPin(GPIOC, GPIO_PIN_12) == GPIO_PIN_SET)
