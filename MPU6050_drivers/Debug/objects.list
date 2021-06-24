@@ -1,3 +1,4 @@
+"MiddleWare/Src/MPU60x0.o"
 "MiddleWare/Src/stm32f446xx_gpio.o"
 "MiddleWare/Src/stm32f446xx_i2c.o"
 "MiddleWare/Src/stm32f446xx_rcc.o"
