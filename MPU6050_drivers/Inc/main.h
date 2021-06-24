@@ -34,9 +34,9 @@ void GPIO_ButtonConfig()
 	GPIO_Init(&led);
 
 	button.pGPIOx = GPIOC;
-	button.GPIO_PinConfig.GPIO_PinNumber = GPIO_PIN_12;
+	button.GPIO_PinConfig.GPIO_PinNumber = GPIO_PIN_3;
 	button.GPIO_PinConfig.GPIO_PinMode = GPIO_MODE_IN;
-	button.GPIO_PinConfig.GPIO_PinPuPdControl = GPIO_PIN_PD;
+	button.GPIO_PinConfig.GPIO_PinPuPdControl = GPIO_PIN_PU;
 	button.GPIO_PinConfig.GPIO_PinSpeed = GPIO_SPEED_LOW;
 
 	GPIOC_CLK_EN();

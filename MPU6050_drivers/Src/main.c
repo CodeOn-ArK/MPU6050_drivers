@@ -37,6 +37,8 @@ void I2C1_GPIOInits();
 void I2C1_Inits();
 
 extern void initialise_monitor_handles(void);
+void MPU_Write(uint8_t *data, uint8_t count);
+void MPU_Read(uint8_t *data, uint8_t count);
 
 #define MASTER_ADDR		 	 0x38		//Set the master address here
 #define MPU_ADDR			 0x68		//Set the slave address here
@@ -107,16 +109,9 @@ int main()
 	uint8_t data[3] = {0,0,0};
 	uint16_t full_data = 0;
 
-	while (MPU6050_Init(&hi2c1) == 1);
-
 	while(1)
 	{
-	  MPU6050_Read_All(&hi2c1, &MPU6050);
-	  for(uint32_t i=0; i<200000; i++);
-	}
-	while(1)
-	{
-		if( GPIO_ReadIPin(GPIOC, GPIO_PIN_12) == GPIO_PIN_SET)
+		if( GPIO_ReadIPin(GPIOC, GPIO_PIN_3) == GPIO_PIN_RESET)
 		{//Send data
 			delay();
 
@@ -133,7 +128,7 @@ int main()
 			data[1] = 0x0;
 			I2C_MasterSendData(&I2C1Handle, data, 2, MPU_ADDR);
 
-#define ENABLE_PRINT
+			uint8_t temp = 0;
 
 			data[0] = 0x1C;		//Accelerometer Config set AFS
 			data[1] = (0x3 << 3);
@@ -144,35 +139,60 @@ int main()
 			 */
 			data[0] = 0x3B; //XOUT_H
 			I2C_MasterSendData( &I2C1Handle, &data[0], 1, MPU_ADDR);
-			I2C_MasterReceiveData(&I2C1Handle, &data[0], 1, MPU_ADDR);
+			I2C_MasterReceiveData(&I2C1Handle, &data[1], 1, MPU_ADDR);
 			data[0] = 0x3C; //XOUT_L
 			I2C_MasterSendData( &I2C1Handle, &data[0], 1, MPU_ADDR);
-			I2C_MasterReceiveData(&I2C1Handle, &data[0], 1, MPU_ADDR);
+			I2C_MasterReceiveData(&I2C1Handle, &data[2], 1, MPU_ADDR);
 
+			data[0] = 0x11;
+			printf("%x\t %x\t %x\t %x\n\r",data[0], *(data + 1), *(data + 2), *((uint16_t *)(data + 1)));
+			temp = data[1];
+			data[1] = data[2];
+			data[2] = temp;
+			printf("%d\n\r", *((uint16_t*)&data[1]));
+			//full_data |= ((uint16_t *)data);
+			//printf("%d\n\r", full_data);
 
 			data[0] = 0x3D; //YOUT_H
 			I2C_MasterSendData( &I2C1Handle, &data[0], 1, MPU_ADDR);
-			I2C_MasterReceiveData(&I2C1Handle, &data[0], 1, MPU_ADDR);
+			I2C_MasterReceiveData(&I2C1Handle, &data[1], 1, MPU_ADDR);
 			data[0] = 0x3E; //YOUT_L
 			I2C_MasterSendData( &I2C1Handle, &data[0], 1, MPU_ADDR);
-			I2C_MasterReceiveData(&I2C1Handle, &data[0], 1, MPU_ADDR);
+			I2C_MasterReceiveData(&I2C1Handle, &data[2], 1, MPU_ADDR);
 
+			data[0] = 0x11;
+			printf("%x\t %x\t %x\t %x\n\r",data[0], *(data + 1), *(data + 2), *((uint16_t *)(&data[1])));
+			temp = data[1];
+			data[1] = data[2];
+			data[2] = temp;
+			printf("%d\n\r", *((uint16_t*)&data[1]));
 
 			data[0] = 0x3F; //ZOUT_H
 			I2C_MasterSendData( &I2C1Handle, &data[0], 1, MPU_ADDR);
-			I2C_MasterReceiveData(&I2C1Handle, &data[0], 1, MPU_ADDR);
+			I2C_MasterReceiveData(&I2C1Handle, &data[1], 1, MPU_ADDR);
 			data[0] = 0x40; //ZOUT_L
 			I2C_MasterSendData( &I2C1Handle, &data[0], 1, MPU_ADDR);
-			I2C_MasterReceiveData(&I2C1Handle, &data[0], 1, MPU_ADDR);
+			I2C_MasterReceiveData(&I2C1Handle, &data[2], 1, MPU_ADDR);
 
-#ifdef ENABLE_PRINT
-			printf("%d\n\r", data);
-			full_data |= ((uint16_t)data);
-			printf("%d\n\r", full_data);
-#endif
+			data[0] = 0x11;
+			printf("%x\t %x\t %x\t %x\n\r",data[0], *(data + 1), *(data + 2), *((uint16_t *)(data + 1)));
+			temp = data[1];
+			data[1] = data[2];
+			data[2] = temp;
+			printf("%d\n\r", *((uint16_t*)&data[1]));
 
+			printf("\033[0;0H \033[2J");
 			GPIO_ToggleOPin(GPIOA, GPIO_PIN_5);
 		}
 	}
 }
 #endif
+
+void MPU_Write(uint8_t *data, uint8_t count)
+{
+	I2C_MasterSendData( &I2C1Handle, data, count, MPU_ADDR);
+}
+void MPU_Read(uint8_t *data, uint8_t count)
+{
+	I2C_MasterReceiveData(&I2C1Handle, data, count, MPU_ADDR);
+}
