@@ -12,6 +12,7 @@
 
 /*************************************************************/
 #define MPU_ADDR					0x68		//Set the slave address here
+#define MPU_ADDR_ALT				0x69
 
 #define SAMPLE_RATE_DIVIDER			0x19
 #define CONFIG_REG					0x1A
@@ -131,7 +132,7 @@ typedef struct{
 void MPU_Write(uint8_t *data, uint8_t count);
 void MPU_Read(uint8_t *data, uint8_t count);
 
-void MPU_Sample_Rate_Divider(uint8_t DivVal);
+void mpu_sample_rate_divider(uint8_t divval);
 void MPU_Config_Register(uint8_t ConfigVal);
 void MPU_Gyro_FullScale_Selection(uint8_t Scale);
 void MPU_Accel_FullScale_Selection(uint8_t Scale);
