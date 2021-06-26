@@ -69,8 +69,6 @@ void I2C2_GPIOInits()
 	I2CPins.GPIO_PinConfig.GPIO_PinNumber  =  SCL_PIN;
 	GPIO_Init(&I2CPins);
 
-
-
 }
 
 void I2C2_Inits()
@@ -90,6 +88,8 @@ int main()
 {
 	initialise_monitor_handles();
 
+	printf("Hello\n\r");
+
 	//GPIO Button Init
 	GPIO_ButtonConfig();
 
@@ -108,6 +108,18 @@ int main()
 	{
 		if( GPIO_ReadIPin(GPIOC, GPIO_PIN_3) == GPIO_PIN_RESET)
 		{//Send data
+			uint8_t temp=0;
+
+			temp = MPU_WHO_AM_I();
+			printf("WHO am I : %x\n\r" ,temp);
+
+			GPIO_ToggleOPin(GPIOA, GPIO_PIN_5);
+		}
+	}
+}
+#endif
+
+#if 0
 			delay();
 
 			data[0] = 0x75;
@@ -174,9 +186,4 @@ int main()
 			data[2] = temp;
 			printf("%d\t%d\n\r", *((uint16_t*)&data[1]), 0xFFFF - (*((uint16_t*)&data[1]) - 1));
 
-			GPIO_ToggleOPin(GPIOA, GPIO_PIN_5);
-		}
-	}
-}
 #endif
-

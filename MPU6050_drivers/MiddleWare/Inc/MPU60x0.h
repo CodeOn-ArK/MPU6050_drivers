@@ -45,33 +45,40 @@
 #define FIFO_R_W					0x74
 #define WHO_AM_I					0x75
 
+//@GFScale Gyro Full Scale
 #define GFS_SEL_0					(0x0 << 3)
 #define GFS_SEL_1					(0x1 << 3)
 #define GFS_SEL_2					(0x2 << 3)
 #define GFS_SEL_3					(0x3 << 3)
 
+//@AFScale Accelerometer Full Scale
 #define AFS_SEL_0					(0x0 << 3)
 #define AFS_SEL_1					(0x1 << 3)
 #define AFS_SEL_2					(0x2 << 3)
 #define AFS_SEL_3					(0x3 << 3)
 
+//@FIFOEN FIFO Enable Bit Val
 #define TEMP_FIFO_EN 				(0x1 << 7)
 #define XG_FIFO_EN 					(0x1 << 6)
 #define YG_FIFO_EN 					(0x1 << 5)
 #define ZG_FIFO_EN 					(0x1 << 4)
 #define ACCEL_FIFO_EN 				(0x1 << 3)
 
+//@INTCONFIG Config Vals for INT pin
 #define INT_LEVEL					(0x1 << 7)
 #define INT_OPEN					(0x1 << 6)
 #define LATCH_INT_EN				(0x1 << 5)
 #define INT_RD_CLEAR				(0x1 << 4)
 
+//@INTEN Interrupt enabling for INT pin
 #define FIFO_OFLOW_EN				(0x1 << 4)
 #define	DATA_RDY_EN  				(0x1 << 0)
 
+//@INTSTAT Interrupt Status
 #define FIFO_OFLOW_INT				(0x1 << 4)
 #define DATA_RDY_INT				(0X1 << 0)
 
+//@RESET
 #define GYRO_RESET					(0x1 << 2)
 #define ACCEL_RESET					(0x1 << 1)
 #define TEMP_RESET					(0x1 << 0)
@@ -132,14 +139,14 @@ typedef struct{
 void MPU_Write(uint8_t *data, uint8_t count);
 void MPU_Read(uint8_t *data, uint8_t count);
 
-void mpu_sample_rate_divider(uint8_t divval);
+void MPU_Sample_Rate_Divider(uint8_t divval);
 void MPU_Config_Register(uint8_t ConfigVal);
 void MPU_Gyro_FullScale_Selection(uint8_t Scale);
 void MPU_Accel_FullScale_Selection(uint8_t Scale);
 void MPU_FIFO_Enable(uint8_t BitVal);				//Accepts bit values of the sensors, for which FIFO needs to be enabled
 void MPU_Interrupt_Pin_Config(uint8_t BitVal);
 void MPU_Interrupt_Enable(uint8_t BitVal);
-uint8_t MPU_Interrupt_Status(uint8_t Flag);			//Checks the given flag with the flag register of the InterruptStatus Register
+uint8_t MPU_Get_Interrupt_Status(uint8_t Flag);			//Checks the given flag with the flag register of the InterruptStatus Register
 Cord_RegDef_t MPU_Get_Accel_value(void);
 Cord_RegDef_t MPU_Get_Gyro_value(void);
 Temp_RegDef_t MPU_Get_Temp(void);
