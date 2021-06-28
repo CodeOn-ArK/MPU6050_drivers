@@ -1,4 +1,44 @@
-16:06:39 **** Build of configuration Debug for project MPU6050_drivers ****
+11:37:22 **** Incremental Build of configuration Debug for project MPU6050_drivers ****
+make -j8 all 
+arm-none-eabi-gcc "../MiddleWare/Src/MPU60x0.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32 -DSTM32F4 -DSTM32F446RETx -DDEBUG -DNUCLEO_F446RE -c -I../Inc -I"/home/ark/st/MPU6050_Drivers/MPU6050_drivers/MiddleWare/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"MiddleWare/Src/MPU60x0.d" -MT"MiddleWare/Src/MPU60x0.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "MiddleWare/Src/MPU60x0.o"
+../MiddleWare/Src/MPU60x0.c: In function 'MPU_Get_Accel_value':
+../MiddleWare/Src/MPU60x0.c:171:2: warning: implicit declaration of function 'memset' [-Wimplicit-function-declaration]
+  memset(&AccelVal, 0, sizeof(AccelVal));
+  ^~~~~~
+../MiddleWare/Src/MPU60x0.c:171:2: warning: incompatible implicit declaration of built-in function 'memset'
+../MiddleWare/Src/MPU60x0.c:171:2: note: include '<string.h>' or provide a declaration of 'memset'
+../MiddleWare/Src/MPU60x0.c: In function 'MPU_Get_Gyro_value':
+../MiddleWare/Src/MPU60x0.c:204:2: warning: incompatible implicit declaration of built-in function 'memset'
+  memset(&GyroVal, 0, sizeof(GyroVal));
+  ^~~~~~
+../MiddleWare/Src/MPU60x0.c:204:2: note: include '<string.h>' or provide a declaration of 'memset'
+../MiddleWare/Src/MPU60x0.c: In function 'MPU_Get_FIFO_Count':
+../MiddleWare/Src/MPU60x0.c:302:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+../MiddleWare/Src/MPU60x0.c: In function 'MPU_Get_FIFO_Data':
+../MiddleWare/Src/MPU60x0.c:314:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+arm-none-eabi-gcc -o "MPU6050_drivers.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/ark/st/MPU6050_Drivers/MPU6050_drivers/STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="MPU6050_drivers.map" -Wl,--gc-sections -static -specs=rdimon.specs -lc -lrdimon --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: MPU6050_drivers.elf
+ 
+arm-none-eabi-objdump -h -S  MPU6050_drivers.elf  > "MPU6050_drivers.list"
+arm-none-eabi-objcopy  -O binary  MPU6050_drivers.elf  "MPU6050_drivers.bin"
+arm-none-eabi-size   MPU6050_drivers.elf 
+   text	   data	    bss	    dec	    hex	filename
+   9376	    164	   1788	  11328	   2c40	MPU6050_drivers.elf
+Finished building: default.size.stdout
+ 
+Finished building: MPU6050_drivers.bin
+ 
+Finished building: MPU6050_drivers.list
+ 
+12:30:14 **** Clean-only build of configuration Debug for project MPU6050_drivers ****
+make -j8 clean 
+rm -rf *
+ 
+12:30:19 **** Incremental Build of configuration Debug for project MPU6050_drivers ****
 make -j8 all 
 arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -c -x assembler-with-cpp -MMD -MP -MF"Startup/startup_stm32f446retx.d" -MT"Startup/startup_stm32f446retx.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Startup/startup_stm32f446retx.o" "../Startup/startup_stm32f446retx.s"
 arm-none-eabi-gcc "../Src/008I2C_master_Tx_test.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32 -DSTM32F4 -DSTM32F446RETx -DDEBUG -DNUCLEO_F446RE -c -I../Inc -I"/home/ark/st/MPU6050_Drivers/MPU6050_drivers/MiddleWare/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/008I2C_master_Tx_test.d" -MT"Src/008I2C_master_Tx_test.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/008I2C_master_Tx_test.o"
@@ -8,45 +48,53 @@ arm-none-eabi-gcc "../MiddleWare/Src/MPU60x0.c" -mcpu=cortex-m4 -std=gnu11 -g3 -
 arm-none-eabi-gcc "../MiddleWare/Src/stm32f446xx_gpio.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32 -DSTM32F4 -DSTM32F446RETx -DDEBUG -DNUCLEO_F446RE -c -I../Inc -I"/home/ark/st/MPU6050_Drivers/MPU6050_drivers/MiddleWare/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"MiddleWare/Src/stm32f446xx_gpio.d" -MT"MiddleWare/Src/stm32f446xx_gpio.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "MiddleWare/Src/stm32f446xx_gpio.o"
 arm-none-eabi-gcc "../MiddleWare/Src/stm32f446xx_i2c.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32 -DSTM32F4 -DSTM32F446RETx -DDEBUG -DNUCLEO_F446RE -c -I../Inc -I"/home/ark/st/MPU6050_Drivers/MPU6050_drivers/MiddleWare/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"MiddleWare/Src/stm32f446xx_i2c.d" -MT"MiddleWare/Src/stm32f446xx_i2c.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "MiddleWare/Src/stm32f446xx_i2c.o"
 arm-none-eabi-gcc "../MiddleWare/Src/stm32f446xx_rcc.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32 -DSTM32F4 -DSTM32F446RETx -DDEBUG -DNUCLEO_F446RE -c -I../Inc -I"/home/ark/st/MPU6050_Drivers/MPU6050_drivers/MiddleWare/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"MiddleWare/Src/stm32f446xx_rcc.d" -MT"MiddleWare/Src/stm32f446xx_rcc.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "MiddleWare/Src/stm32f446xx_rcc.o"
+../Src/main.c:33:4: warning: #warning "FPU is not initialized, but the project is compiling for an FPU. Please initialize the FPU before use." [-Wcpp]
+   #warning "FPU is not initialized, but the project is compiling for an FPU. Please initialize the FPU before use."
+    ^~~~~~~
+In file included from /home/ark/st/MPU6050_Drivers/MPU6050_drivers/MiddleWare/Inc/stm32f446xx.h:640:0,
+                 from ../Inc/main.h:11,
+                 from ../Src/main.c:29:
+../Src/main.c: In function 'I2C2_Inits':
+/home/ark/st/MPU6050_Drivers/MPU6050_drivers/MiddleWare/Inc/stm32f446xx_i2c.h:53:28: warning: large integer implicitly truncated to unsigned type [-Woverflow]
+ #define I2C_SCL_SPEED_FM4K 0x61A80UL
+                            ^
+../Src/main.c:82:39: note: in expansion of macro 'I2C_SCL_SPEED_FM4K'
+  I2C2Handle.I2C_Config.I2C_SCLSpeed = I2C_SCL_SPEED_FM4K;
+                                       ^~~~~~~~~~~~~~~~~~
+../Src/main.c: In function 'main':
+../Src/main.c:91:2: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+  printf("Hello\n\r");
+  ^~~~~~
+../Src/main.c:91:2: warning: incompatible implicit declaration of built-in function 'printf'
+../Src/main.c:91:2: note: include '<stdio.h>' or provide a declaration of 'printf'
+../Src/main.c:119:11: warning: unknown escape sequence: '\X'
+    printf("\n\X_H: %d X_L: %d Y_H: %d Y_L: %d Z_H: %d Z_L: %d n\r", accx.X_Raw_H, accx.X_Raw_L, accx.Y_Raw_H, accx.Y_Raw_L, accx.Z_Raw_H, accx.Z_Raw_L);
+           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../Src/main.c:122:11: warning: unknown escape sequence: '\X'
+    printf("\n\X_H: %d X_L: %d Y_H: %d Y_L: %d Z_H: %d Z_L: %d n\r", gyyx.X_Raw_H, gyyx.X_Raw_L, gyyx.Y_Raw_H, gyyx.Y_Raw_L, gyyx.Z_Raw_H, gyyx.Z_Raw_L);
+           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../Src/main.c:105:10: warning: unused variable 'data' [-Wunused-variable]
+  uint8_t data[3] = {0,0,0};
+          ^~~~
 ../MiddleWare/Src/MPU60x0.c: In function 'MPU_Get_Accel_value':
-../MiddleWare/Src/MPU60x0.c:170:1: warning: control reaches end of non-void function [-Wreturn-type]
- }
- ^
+../MiddleWare/Src/MPU60x0.c:171:2: warning: implicit declaration of function 'memset' [-Wimplicit-function-declaration]
+  memset(&AccelVal, 0, sizeof(AccelVal));
+  ^~~~~~
+../MiddleWare/Src/MPU60x0.c:171:2: warning: incompatible implicit declaration of built-in function 'memset'
+../MiddleWare/Src/MPU60x0.c:171:2: note: include '<string.h>' or provide a declaration of 'memset'
 ../MiddleWare/Src/MPU60x0.c: In function 'MPU_Get_Gyro_value':
-../MiddleWare/Src/MPU60x0.c:182:1: warning: control reaches end of non-void function [-Wreturn-type]
- }
- ^
-../MiddleWare/Src/MPU60x0.c: In function 'MPU_Get_Temp':
-../MiddleWare/Src/MPU60x0.c:194:1: warning: control reaches end of non-void function [-Wreturn-type]
- }
- ^
+../MiddleWare/Src/MPU60x0.c:204:2: warning: incompatible implicit declaration of built-in function 'memset'
+  memset(&GyroVal, 0, sizeof(GyroVal));
+  ^~~~~~
+../MiddleWare/Src/MPU60x0.c:204:2: note: include '<string.h>' or provide a declaration of 'memset'
 ../MiddleWare/Src/MPU60x0.c: In function 'MPU_Get_FIFO_Count':
-../MiddleWare/Src/MPU60x0.c:250:1: warning: control reaches end of non-void function [-Wreturn-type]
+../MiddleWare/Src/MPU60x0.c:302:1: warning: control reaches end of non-void function [-Wreturn-type]
  }
  ^
 ../MiddleWare/Src/MPU60x0.c: In function 'MPU_Get_FIFO_Data':
-../MiddleWare/Src/MPU60x0.c:262:1: warning: control reaches end of non-void function [-Wreturn-type]
+../MiddleWare/Src/MPU60x0.c:314:1: warning: control reaches end of non-void function [-Wreturn-type]
  }
  ^
-../Src/main.c:33:4: warning: #warning "FPU is not initialized, but the project is compiling for an FPU. Please initialize the FPU before use." [-Wcpp]
-   #warning "FPU is not initialized, but the project is compiling for an FPU. Please initialize the FPU before use."
-    ^~~~~~~
-In file included from /home/ark/st/MPU6050_Drivers/MPU6050_drivers/MiddleWare/Inc/stm32f446xx.h:640:0,
-                 from ../Inc/main.h:11,
-                 from ../Src/main.c:29:
-../Src/main.c: In function 'I2C2_Inits':
-/home/ark/st/MPU6050_Drivers/MPU6050_drivers/MiddleWare/Inc/stm32f446xx_i2c.h:53:28: warning: large integer implicitly truncated to unsigned type [-Woverflow]
- #define I2C_SCL_SPEED_FM4K 0x61A80UL
-                            ^
-../Src/main.c:84:39: note: in expansion of macro 'I2C_SCL_SPEED_FM4K'
-  I2C2Handle.I2C_Config.I2C_SCLSpeed = I2C_SCL_SPEED_FM4K;
-                                       ^~~~~~~~~~~~~~~~~~
-../Src/main.c: In function 'main':
-../Src/main.c:143:4: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
-    printf("%x\t %x\t %x\t %x\n\r",data[0], *(data + 1), *(data + 2), *((uint16_t *)(data + 1)));
-    ^~~~~~
-../Src/main.c:143:4: warning: incompatible implicit declaration of built-in function 'printf'
-../Src/main.c:143:4: note: include '<stdio.h>' or provide a declaration of 'printf'
 arm-none-eabi-gcc -o "MPU6050_drivers.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/ark/st/MPU6050_Drivers/MPU6050_drivers/STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="MPU6050_drivers.map" -Wl,--gc-sections -static -specs=rdimon.specs -lc -lrdimon --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 Finished building target: MPU6050_drivers.elf
  
@@ -54,14 +102,14 @@ arm-none-eabi-size   MPU6050_drivers.elf
 arm-none-eabi-objdump -h -S  MPU6050_drivers.elf  > "MPU6050_drivers.list"
 arm-none-eabi-objcopy  -O binary  MPU6050_drivers.elf  "MPU6050_drivers.bin"
    text	   data	    bss	    dec	    hex	filename
-   9812	    164	   1788	  11764	   2df4	MPU6050_drivers.elf
+   9684	    164	   1788	  11636	   2d74	MPU6050_drivers.elf
 Finished building: default.size.stdout
  
 Finished building: MPU6050_drivers.bin
  
 Finished building: MPU6050_drivers.list
  
-16:09:58 **** Incremental Build of configuration Debug for project MPU6050_drivers ****
+12:35:21 **** Incremental Build of configuration Debug for project MPU6050_drivers ****
 make -j8 all 
 arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32 -DSTM32F4 -DSTM32F446RETx -DDEBUG -DNUCLEO_F446RE -c -I../Inc -I"/home/ark/st/MPU6050_Drivers/MPU6050_drivers/MiddleWare/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
 ../Src/main.c:33:4: warning: #warning "FPU is not initialized, but the project is compiling for an FPU. Please initialize the FPU before use." [-Wcpp]
@@ -78,12 +126,18 @@ In file included from /home/ark/st/MPU6050_Drivers/MPU6050_drivers/MiddleWare/In
   I2C2Handle.I2C_Config.I2C_SCLSpeed = I2C_SCL_SPEED_FM4K;
                                        ^~~~~~~~~~~~~~~~~~
 ../Src/main.c: In function 'main':
-../Src/main.c:112:4: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
-    printf("WHO am I? %d" ,temp);
-    ^~~~~~
-../Src/main.c:112:4: warning: incompatible implicit declaration of built-in function 'printf'
-../Src/main.c:112:4: note: include '<stdio.h>' or provide a declaration of 'printf'
-../Src/main.c:103:10: warning: unused variable 'data' [-Wunused-variable]
+../Src/main.c:91:2: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+  printf("Hello\n\r");
+  ^~~~~~
+../Src/main.c:91:2: warning: incompatible implicit declaration of built-in function 'printf'
+../Src/main.c:91:2: note: include '<stdio.h>' or provide a declaration of 'printf'
+../Src/main.c:122:11: warning: unknown escape sequence: '\X'
+    printf("\n\X_H: %d X_L: %d Y_H: %d Y_L: %d Z_H: %d Z_L: %d n\r", accx.X_Raw_H, accx.X_Raw_L, accx.Y_Raw_H, accx.Y_Raw_L, accx.Z_Raw_H, accx.Z_Raw_L);
+           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../Src/main.c:125:11: warning: unknown escape sequence: '\X'
+    printf("\n\X_H: %d X_L: %d Y_H: %d Y_L: %d Z_H: %d Z_L: %d n\r", gyyx.X_Raw_H, gyyx.X_Raw_L, gyyx.Y_Raw_H, gyyx.Y_Raw_L, gyyx.Z_Raw_H, gyyx.Z_Raw_L);
+           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../Src/main.c:105:10: warning: unused variable 'data' [-Wunused-variable]
   uint8_t data[3] = {0,0,0};
           ^~~~
 arm-none-eabi-gcc -o "MPU6050_drivers.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/ark/st/MPU6050_Drivers/MPU6050_drivers/STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="MPU6050_drivers.map" -Wl,--gc-sections -static -specs=rdimon.specs -lc -lrdimon --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
@@ -93,21 +147,59 @@ arm-none-eabi-objdump -h -S  MPU6050_drivers.elf  > "MPU6050_drivers.list"
 arm-none-eabi-objcopy  -O binary  MPU6050_drivers.elf  "MPU6050_drivers.bin"
 arm-none-eabi-size   MPU6050_drivers.elf 
    text	   data	    bss	    dec	    hex	filename
-   9356	    164	   1788	  11308	   2c2c	MPU6050_drivers.elf
+   9752	    164	   1788	  11704	   2db8	MPU6050_drivers.elf
 Finished building: default.size.stdout
  
 Finished building: MPU6050_drivers.bin
  
 Finished building: MPU6050_drivers.list
  
-16:10:10 **** Incremental Build of configuration Debug for project MPU6050_drivers ****
+12:39:59 **** Incremental Build of configuration Debug for project MPU6050_drivers ****
 make -j8 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32 -DSTM32F4 -DSTM32F446RETx -DDEBUG -DNUCLEO_F446RE -c -I../Inc -I"/home/ark/st/MPU6050_Drivers/MPU6050_drivers/MiddleWare/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+../Src/main.c:33:4: warning: #warning "FPU is not initialized, but the project is compiling for an FPU. Please initialize the FPU before use." [-Wcpp]
+   #warning "FPU is not initialized, but the project is compiling for an FPU. Please initialize the FPU before use."
+    ^~~~~~~
+In file included from /home/ark/st/MPU6050_Drivers/MPU6050_drivers/MiddleWare/Inc/stm32f446xx.h:640:0,
+                 from ../Inc/main.h:11,
+                 from ../Src/main.c:29:
+../Src/main.c: In function 'I2C2_Inits':
+/home/ark/st/MPU6050_Drivers/MPU6050_drivers/MiddleWare/Inc/stm32f446xx_i2c.h:53:28: warning: large integer implicitly truncated to unsigned type [-Woverflow]
+ #define I2C_SCL_SPEED_FM4K 0x61A80UL
+                            ^
+../Src/main.c:82:39: note: in expansion of macro 'I2C_SCL_SPEED_FM4K'
+  I2C2Handle.I2C_Config.I2C_SCLSpeed = I2C_SCL_SPEED_FM4K;
+                                       ^~~~~~~~~~~~~~~~~~
+../Src/main.c: In function 'main':
+../Src/main.c:91:2: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+  printf("Hello\n\r");
+  ^~~~~~
+../Src/main.c:91:2: warning: incompatible implicit declaration of built-in function 'printf'
+../Src/main.c:91:2: note: include '<stdio.h>' or provide a declaration of 'printf'
+../Src/main.c:124:11: warning: unknown escape sequence: '\X'
+    printf("\n\X_H: %d X_L: %d Y_H: %d Y_L: %d Z_H: %d Z_L: %d n\r", accx.X_Raw_H, accx.X_Raw_L, accx.Y_Raw_H, accx.Y_Raw_L, accx.Z_Raw_H, accx.Z_Raw_L);
+           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../Src/main.c:127:11: warning: unknown escape sequence: '\X'
+    printf("\n\X_H: %d X_L: %d Y_H: %d Y_L: %d Z_H: %d Z_L: %d n\r", gyyx.X_Raw_H, gyyx.X_Raw_L, gyyx.Y_Raw_H, gyyx.Y_Raw_L, gyyx.Z_Raw_H, gyyx.Z_Raw_L);
+           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../Src/main.c:105:10: warning: unused variable 'data' [-Wunused-variable]
+  uint8_t data[3] = {0,0,0};
+          ^~~~
+arm-none-eabi-gcc -o "MPU6050_drivers.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/ark/st/MPU6050_Drivers/MPU6050_drivers/STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="MPU6050_drivers.map" -Wl,--gc-sections -static -specs=rdimon.specs -lc -lrdimon --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: MPU6050_drivers.elf
+ 
+arm-none-eabi-objdump -h -S  MPU6050_drivers.elf  > "MPU6050_drivers.list"
+arm-none-eabi-objcopy  -O binary  MPU6050_drivers.elf  "MPU6050_drivers.bin"
 arm-none-eabi-size   MPU6050_drivers.elf 
    text	   data	    bss	    dec	    hex	filename
-   9356	    164	   1788	  11308	   2c2c	MPU6050_drivers.elf
+   9824	    164	   1788	  11776	   2e00	MPU6050_drivers.elf
 Finished building: default.size.stdout
  
-16:12:17 **** Incremental Build of configuration Debug for project MPU6050_drivers ****
+Finished building: MPU6050_drivers.bin
+ 
+Finished building: MPU6050_drivers.list
+ 
+12:48:27 **** Incremental Build of configuration Debug for project MPU6050_drivers ****
 make -j8 all 
 arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32 -DSTM32F4 -DSTM32F446RETx -DDEBUG -DNUCLEO_F446RE -c -I../Inc -I"/home/ark/st/MPU6050_Drivers/MPU6050_drivers/MiddleWare/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
 ../Src/main.c:33:4: warning: #warning "FPU is not initialized, but the project is compiling for an FPU. Please initialize the FPU before use." [-Wcpp]
@@ -139,14 +231,80 @@ arm-none-eabi-objdump -h -S  MPU6050_drivers.elf  > "MPU6050_drivers.list"
 arm-none-eabi-objcopy  -O binary  MPU6050_drivers.elf  "MPU6050_drivers.bin"
 arm-none-eabi-size   MPU6050_drivers.elf 
    text	   data	    bss	    dec	    hex	filename
-   9376	    164	   1788	  11328	   2c40	MPU6050_drivers.elf
+   9824	    164	   1788	  11776	   2e00	MPU6050_drivers.elf
 Finished building: default.size.stdout
  
 Finished building: MPU6050_drivers.bin
  
 Finished building: MPU6050_drivers.list
  
-16:12:49 **** Incremental Build of configuration Debug for project MPU6050_drivers ****
+15:31:16 **** Incremental Build of configuration Debug for project MPU6050_drivers ****
+make -j8 all 
+arm-none-eabi-gcc "../MiddleWare/Src/MPU60x0.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32 -DSTM32F4 -DSTM32F446RETx -DDEBUG -DNUCLEO_F446RE -c -I../Inc -I"/home/ark/st/MPU6050_Drivers/MPU6050_drivers/MiddleWare/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"MiddleWare/Src/MPU60x0.d" -MT"MiddleWare/Src/MPU60x0.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "MiddleWare/Src/MPU60x0.o"
+../MiddleWare/Src/MPU60x0.c: In function 'MPU_Gyro_FullScale_Selection':
+../MiddleWare/Src/MPU60x0.c:99:16: error: 'divval' undeclared (first use in this function); did you mean 'div'?
+  tempdata[1] = divval;
+                ^~~~~~
+                div
+../MiddleWare/Src/MPU60x0.c:99:16: note: each undeclared identifier is reported only once for each function it appears in
+../MiddleWare/Src/MPU60x0.c: In function 'MPU_Get_Accel_value':
+../MiddleWare/Src/MPU60x0.c:202:2: warning: implicit declaration of function 'memset' [-Wimplicit-function-declaration]
+  memset(&AccelVal, 0, sizeof(AccelVal));
+  ^~~~~~
+../MiddleWare/Src/MPU60x0.c:202:2: warning: incompatible implicit declaration of built-in function 'memset'
+../MiddleWare/Src/MPU60x0.c:202:2: note: include '<string.h>' or provide a declaration of 'memset'
+../MiddleWare/Src/MPU60x0.c: In function 'MPU_Get_Gyro_value':
+../MiddleWare/Src/MPU60x0.c:235:2: warning: incompatible implicit declaration of built-in function 'memset'
+  memset(&GyroVal, 0, sizeof(GyroVal));
+  ^~~~~~
+../MiddleWare/Src/MPU60x0.c:235:2: note: include '<string.h>' or provide a declaration of 'memset'
+../MiddleWare/Src/MPU60x0.c: In function 'MPU_Get_FIFO_Count':
+../MiddleWare/Src/MPU60x0.c:349:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+../MiddleWare/Src/MPU60x0.c: In function 'MPU_Get_FIFO_Data':
+../MiddleWare/Src/MPU60x0.c:361:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+make: *** [MiddleWare/Src/subdir.mk:27: MiddleWare/Src/MPU60x0.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+15:31:36 **** Incremental Build of configuration Debug for project MPU6050_drivers ****
+make -j8 all 
+arm-none-eabi-gcc "../MiddleWare/Src/MPU60x0.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32 -DSTM32F4 -DSTM32F446RETx -DDEBUG -DNUCLEO_F446RE -c -I../Inc -I"/home/ark/st/MPU6050_Drivers/MPU6050_drivers/MiddleWare/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"MiddleWare/Src/MPU60x0.d" -MT"MiddleWare/Src/MPU60x0.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "MiddleWare/Src/MPU60x0.o"
+../MiddleWare/Src/MPU60x0.c: In function 'MPU_Get_Accel_value':
+../MiddleWare/Src/MPU60x0.c:202:2: warning: implicit declaration of function 'memset' [-Wimplicit-function-declaration]
+  memset(&AccelVal, 0, sizeof(AccelVal));
+  ^~~~~~
+../MiddleWare/Src/MPU60x0.c:202:2: warning: incompatible implicit declaration of built-in function 'memset'
+../MiddleWare/Src/MPU60x0.c:202:2: note: include '<string.h>' or provide a declaration of 'memset'
+../MiddleWare/Src/MPU60x0.c: In function 'MPU_Get_Gyro_value':
+../MiddleWare/Src/MPU60x0.c:235:2: warning: incompatible implicit declaration of built-in function 'memset'
+  memset(&GyroVal, 0, sizeof(GyroVal));
+  ^~~~~~
+../MiddleWare/Src/MPU60x0.c:235:2: note: include '<string.h>' or provide a declaration of 'memset'
+../MiddleWare/Src/MPU60x0.c: In function 'MPU_Get_FIFO_Count':
+../MiddleWare/Src/MPU60x0.c:349:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+../MiddleWare/Src/MPU60x0.c: In function 'MPU_Get_FIFO_Data':
+../MiddleWare/Src/MPU60x0.c:361:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+arm-none-eabi-gcc -o "MPU6050_drivers.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/ark/st/MPU6050_Drivers/MPU6050_drivers/STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="MPU6050_drivers.map" -Wl,--gc-sections -static -specs=rdimon.specs -lc -lrdimon --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: MPU6050_drivers.elf
+ 
+arm-none-eabi-objdump -h -S  MPU6050_drivers.elf  > "MPU6050_drivers.list"
+arm-none-eabi-objcopy  -O binary  MPU6050_drivers.elf  "MPU6050_drivers.bin"
+arm-none-eabi-size   MPU6050_drivers.elf 
+   text	   data	    bss	    dec	    hex	filename
+   9872	    164	   1788	  11824	   2e30	MPU6050_drivers.elf
+Finished building: default.size.stdout
+ 
+Finished building: MPU6050_drivers.bin
+ 
+Finished building: MPU6050_drivers.list
+ 
+15:32:55 **** Incremental Build of configuration Debug for project MPU6050_drivers ****
 make -j8 all 
 arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32 -DSTM32F4 -DSTM32F446RETx -DDEBUG -DNUCLEO_F446RE -c -I../Inc -I"/home/ark/st/MPU6050_Drivers/MPU6050_drivers/MiddleWare/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
 ../Src/main.c:33:4: warning: #warning "FPU is not initialized, but the project is compiling for an FPU. Please initialize the FPU before use." [-Wcpp]
@@ -178,14 +336,14 @@ arm-none-eabi-objdump -h -S  MPU6050_drivers.elf  > "MPU6050_drivers.list"
 arm-none-eabi-objcopy  -O binary  MPU6050_drivers.elf  "MPU6050_drivers.bin"
 arm-none-eabi-size   MPU6050_drivers.elf 
    text	   data	    bss	    dec	    hex	filename
-   9376	    164	   1788	  11328	   2c40	MPU6050_drivers.elf
+   9872	    164	   1788	  11824	   2e30	MPU6050_drivers.elf
 Finished building: default.size.stdout
  
 Finished building: MPU6050_drivers.bin
  
 Finished building: MPU6050_drivers.list
  
-16:14:22 **** Incremental Build of configuration Debug for project MPU6050_drivers ****
+15:36:39 **** Incremental Build of configuration Debug for project MPU6050_drivers ****
 make -j8 all 
 arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32 -DSTM32F4 -DSTM32F446RETx -DDEBUG -DNUCLEO_F446RE -c -I../Inc -I"/home/ark/st/MPU6050_Drivers/MPU6050_drivers/MiddleWare/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
 ../Src/main.c:33:4: warning: #warning "FPU is not initialized, but the project is compiling for an FPU. Please initialize the FPU before use." [-Wcpp]
@@ -217,7 +375,130 @@ arm-none-eabi-objdump -h -S  MPU6050_drivers.elf  > "MPU6050_drivers.list"
 arm-none-eabi-objcopy  -O binary  MPU6050_drivers.elf  "MPU6050_drivers.bin"
 arm-none-eabi-size   MPU6050_drivers.elf 
    text	   data	    bss	    dec	    hex	filename
-   9392	    164	   1788	  11344	   2c50	MPU6050_drivers.elf
+   9944	    164	   1788	  11896	   2e78	MPU6050_drivers.elf
+Finished building: default.size.stdout
+ 
+Finished building: MPU6050_drivers.bin
+ 
+Finished building: MPU6050_drivers.list
+ 
+15:37:28 **** Incremental Build of configuration Debug for project MPU6050_drivers ****
+make -j8 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32 -DSTM32F4 -DSTM32F446RETx -DDEBUG -DNUCLEO_F446RE -c -I../Inc -I"/home/ark/st/MPU6050_Drivers/MPU6050_drivers/MiddleWare/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+../Src/main.c:33:4: warning: #warning "FPU is not initialized, but the project is compiling for an FPU. Please initialize the FPU before use." [-Wcpp]
+   #warning "FPU is not initialized, but the project is compiling for an FPU. Please initialize the FPU before use."
+    ^~~~~~~
+In file included from /home/ark/st/MPU6050_Drivers/MPU6050_drivers/MiddleWare/Inc/stm32f446xx.h:640:0,
+                 from ../Inc/main.h:11,
+                 from ../Src/main.c:29:
+../Src/main.c: In function 'I2C2_Inits':
+/home/ark/st/MPU6050_Drivers/MPU6050_drivers/MiddleWare/Inc/stm32f446xx_i2c.h:53:28: warning: large integer implicitly truncated to unsigned type [-Woverflow]
+ #define I2C_SCL_SPEED_FM4K 0x61A80UL
+                            ^
+../Src/main.c:82:39: note: in expansion of macro 'I2C_SCL_SPEED_FM4K'
+  I2C2Handle.I2C_Config.I2C_SCLSpeed = I2C_SCL_SPEED_FM4K;
+                                       ^~~~~~~~~~~~~~~~~~
+../Src/main.c: In function 'main':
+../Src/main.c:91:2: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+  printf("Hello\n\r");
+  ^~~~~~
+../Src/main.c:91:2: warning: incompatible implicit declaration of built-in function 'printf'
+../Src/main.c:91:2: note: include '<stdio.h>' or provide a declaration of 'printf'
+../Src/main.c:105:10: warning: unused variable 'data' [-Wunused-variable]
+  uint8_t data[3] = {0,0,0};
+          ^~~~
+arm-none-eabi-gcc -o "MPU6050_drivers.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/ark/st/MPU6050_Drivers/MPU6050_drivers/STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="MPU6050_drivers.map" -Wl,--gc-sections -static -specs=rdimon.specs -lc -lrdimon --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: MPU6050_drivers.elf
+ 
+arm-none-eabi-objdump -h -S  MPU6050_drivers.elf  > "MPU6050_drivers.list"
+arm-none-eabi-objcopy  -O binary  MPU6050_drivers.elf  "MPU6050_drivers.bin"
+arm-none-eabi-size   MPU6050_drivers.elf 
+   text	   data	    bss	    dec	    hex	filename
+   9944	    164	   1788	  11896	   2e78	MPU6050_drivers.elf
+Finished building: default.size.stdout
+ 
+Finished building: MPU6050_drivers.bin
+ 
+Finished building: MPU6050_drivers.list
+ 
+15:49:00 **** Incremental Build of configuration Debug for project MPU6050_drivers ****
+make -j8 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32 -DSTM32F4 -DSTM32F446RETx -DDEBUG -DNUCLEO_F446RE -c -I../Inc -I"/home/ark/st/MPU6050_Drivers/MPU6050_drivers/MiddleWare/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+../Src/main.c:33:4: warning: #warning "FPU is not initialized, but the project is compiling for an FPU. Please initialize the FPU before use." [-Wcpp]
+   #warning "FPU is not initialized, but the project is compiling for an FPU. Please initialize the FPU before use."
+    ^~~~~~~
+In file included from /home/ark/st/MPU6050_Drivers/MPU6050_drivers/MiddleWare/Inc/stm32f446xx.h:640:0,
+                 from ../Inc/main.h:11,
+                 from ../Src/main.c:29:
+../Src/main.c: In function 'I2C2_Inits':
+/home/ark/st/MPU6050_Drivers/MPU6050_drivers/MiddleWare/Inc/stm32f446xx_i2c.h:53:28: warning: large integer implicitly truncated to unsigned type [-Woverflow]
+ #define I2C_SCL_SPEED_FM4K 0x61A80UL
+                            ^
+../Src/main.c:82:39: note: in expansion of macro 'I2C_SCL_SPEED_FM4K'
+  I2C2Handle.I2C_Config.I2C_SCLSpeed = I2C_SCL_SPEED_FM4K;
+                                       ^~~~~~~~~~~~~~~~~~
+../Src/main.c: In function 'main':
+../Src/main.c:91:2: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+  printf("Hello\n\r");
+  ^~~~~~
+../Src/main.c:91:2: warning: incompatible implicit declaration of built-in function 'printf'
+../Src/main.c:91:2: note: include '<stdio.h>' or provide a declaration of 'printf'
+../Src/main.c:105:10: warning: unused variable 'data' [-Wunused-variable]
+  uint8_t data[3] = {0,0,0};
+          ^~~~
+arm-none-eabi-gcc -o "MPU6050_drivers.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/ark/st/MPU6050_Drivers/MPU6050_drivers/STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="MPU6050_drivers.map" -Wl,--gc-sections -static -specs=rdimon.specs -lc -lrdimon --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: MPU6050_drivers.elf
+ 
+arm-none-eabi-objdump -h -S  MPU6050_drivers.elf  > "MPU6050_drivers.list"
+arm-none-eabi-objcopy  -O binary  MPU6050_drivers.elf  "MPU6050_drivers.bin"
+arm-none-eabi-size   MPU6050_drivers.elf 
+   text	   data	    bss	    dec	    hex	filename
+  10064	    164	   1788	  12016	   2ef0	MPU6050_drivers.elf
+Finished building: default.size.stdout
+ 
+Finished building: MPU6050_drivers.bin
+ 
+Finished building: MPU6050_drivers.list
+ 
+15:59:24 **** Incremental Build of configuration Debug for project MPU6050_drivers ****
+make -j8 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32 -DSTM32F4 -DSTM32F446RETx -DDEBUG -DNUCLEO_F446RE -c -I../Inc -I"/home/ark/st/MPU6050_Drivers/MPU6050_drivers/MiddleWare/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+../Src/main.c:33:4: warning: #warning "FPU is not initialized, but the project is compiling for an FPU. Please initialize the FPU before use." [-Wcpp]
+   #warning "FPU is not initialized, but the project is compiling for an FPU. Please initialize the FPU before use."
+    ^~~~~~~
+In file included from /home/ark/st/MPU6050_Drivers/MPU6050_drivers/MiddleWare/Inc/stm32f446xx.h:640:0,
+                 from ../Inc/main.h:11,
+                 from ../Src/main.c:29:
+../Src/main.c: In function 'I2C2_Inits':
+/home/ark/st/MPU6050_Drivers/MPU6050_drivers/MiddleWare/Inc/stm32f446xx_i2c.h:53:28: warning: large integer implicitly truncated to unsigned type [-Woverflow]
+ #define I2C_SCL_SPEED_FM4K 0x61A80UL
+                            ^
+../Src/main.c:82:39: note: in expansion of macro 'I2C_SCL_SPEED_FM4K'
+  I2C2Handle.I2C_Config.I2C_SCLSpeed = I2C_SCL_SPEED_FM4K;
+                                       ^~~~~~~~~~~~~~~~~~
+../Src/main.c: In function 'main':
+../Src/main.c:91:2: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+  printf("Hello\n\r");
+  ^~~~~~
+../Src/main.c:91:2: warning: incompatible implicit declaration of built-in function 'printf'
+../Src/main.c:91:2: note: include '<stdio.h>' or provide a declaration of 'printf'
+../Src/main.c:121:24: warning: unused variable 'gyyx' [-Wunused-variable]
+    Cord_RegDef_t accx, gyyx;
+                        ^~~~
+../Src/main.c:121:18: warning: unused variable 'accx' [-Wunused-variable]
+    Cord_RegDef_t accx, gyyx;
+                  ^~~~
+../Src/main.c:105:10: warning: unused variable 'data' [-Wunused-variable]
+  uint8_t data[3] = {0,0,0};
+          ^~~~
+arm-none-eabi-gcc -o "MPU6050_drivers.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/ark/st/MPU6050_Drivers/MPU6050_drivers/STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="MPU6050_drivers.map" -Wl,--gc-sections -static -specs=rdimon.specs -lc -lrdimon --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: MPU6050_drivers.elf
+ 
+arm-none-eabi-objdump -h -S  MPU6050_drivers.elf  > "MPU6050_drivers.list"
+arm-none-eabi-objcopy  -O binary  MPU6050_drivers.elf  "MPU6050_drivers.bin"
+arm-none-eabi-size   MPU6050_drivers.elf 
+   text	   data	    bss	    dec	    hex	filename
+   9788	    164	   1788	  11740	   2ddc	MPU6050_drivers.elf
 Finished building: default.size.stdout
  
 Finished building: MPU6050_drivers.bin

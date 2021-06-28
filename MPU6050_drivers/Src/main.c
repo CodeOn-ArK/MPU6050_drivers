@@ -113,6 +113,29 @@ int main()
 			temp = MPU_WHO_AM_I();
 			printf("WHO am I : %x\n\r" ,temp);
 
+			temp = 0;
+			MPU_Power_Manager(temp, 1);
+
+			MPU_Accel_FullScale_Selection(AFS_SEL_3);
+
+			Cord_RegDef_t accx, gyyx;
+			Temp_RegDef_t tempx;
+
+#if 0
+			accx = MPU_Get_Accel_value();
+			printf("\nX_H:X_L = {%x,%x}\t Y_H:Y_L = {%x,%x}\t Z_H:Z_L = {%x,%x}\n\r", accx.X_Raw_H, accx.X_Raw_L, accx.Y_Raw_H, accx.Y_Raw_L, accx.Z_Raw_H, accx.Z_Raw_L);
+
+			gyyx = MPU_Get_Accel_value();
+			printf("\nX_H:X_L = {%x,%x}\t Y_H:Y_L = {%x,%x}\t Z_H:Z_L = {%x,%x}\n\r ", gyyx.X_Raw_H, gyyx.X_Raw_L, gyyx.Y_Raw_H, gyyx.Y_Raw_L, gyyx.Z_Raw_H, gyyx.Z_Raw_L);
+#endif
+			tempx = MPU_Get_Temp();
+			printf("\nT_H:T_L = {%x,%x} \n\r", tempx.H_Raw, tempx.L_Raw);
+
+			uint16_t utemp16 = ((tempx.H_Raw << 8) | (tempx.L_Raw));
+			printf("utemp : %d\t%x\n\r", utemp16, utemp16);
+			int16_t stemp16 = ((tempx.H_Raw << 8) | (tempx.L_Raw));
+			printf("stemp : %d\t%x\n\r", stemp16, stemp16);
+
 			GPIO_ToggleOPin(GPIOA, GPIO_PIN_5);
 		}
 	}

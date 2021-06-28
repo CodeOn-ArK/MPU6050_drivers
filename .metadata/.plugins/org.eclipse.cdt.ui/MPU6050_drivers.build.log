@@ -1,4 +1,4 @@
-16:14:22 **** Incremental Build of configuration Debug for project MPU6050_drivers ****
+15:59:24 **** Incremental Build of configuration Debug for project MPU6050_drivers ****
 make -j8 all 
 arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32 -DSTM32F4 -DSTM32F446RETx -DDEBUG -DNUCLEO_F446RE -c -I../Inc -I"/home/ark/st/MPU6050_Drivers/MPU6050_drivers/MiddleWare/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
 ../Src/main.c:33:4: warning: #warning "FPU is not initialized, but the project is compiling for an FPU. Please initialize the FPU before use." [-Wcpp]
@@ -20,6 +20,12 @@ In file included from /home/ark/st/MPU6050_Drivers/MPU6050_drivers/MiddleWare/In
   ^~~~~~
 ../Src/main.c:91:2: warning: incompatible implicit declaration of built-in function 'printf'
 ../Src/main.c:91:2: note: include '<stdio.h>' or provide a declaration of 'printf'
+../Src/main.c:121:24: warning: unused variable 'gyyx' [-Wunused-variable]
+    Cord_RegDef_t accx, gyyx;
+                        ^~~~
+../Src/main.c:121:18: warning: unused variable 'accx' [-Wunused-variable]
+    Cord_RegDef_t accx, gyyx;
+                  ^~~~
 ../Src/main.c:105:10: warning: unused variable 'data' [-Wunused-variable]
   uint8_t data[3] = {0,0,0};
           ^~~~
@@ -30,7 +36,7 @@ arm-none-eabi-objdump -h -S  MPU6050_drivers.elf  > "MPU6050_drivers.list"
 arm-none-eabi-objcopy  -O binary  MPU6050_drivers.elf  "MPU6050_drivers.bin"
 arm-none-eabi-size   MPU6050_drivers.elf 
    text	   data	    bss	    dec	    hex	filename
-   9392	    164	   1788	  11344	   2c50	MPU6050_drivers.elf
+   9788	    164	   1788	  11740	   2ddc	MPU6050_drivers.elf
 Finished building: default.size.stdout
  
 Finished building: MPU6050_drivers.bin
@@ -38,5 +44,5 @@ Finished building: MPU6050_drivers.bin
 Finished building: MPU6050_drivers.list
  
 
-16:14:23 Build Finished. 0 errors, 5 warnings. (took 827ms)
+15:59:25 Build Finished. 0 errors, 7 warnings. (took 665ms)
 
